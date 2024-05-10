@@ -16,19 +16,10 @@
                     @csrf
                     <input type="hidden" name="post[category_id]" value =1>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">出席</button>
-                </form>
-                 <form action="/posts" method="POST" class="management">
-                    @csrf
                     <input type="hidden" name="post[category_id]" value =2>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">欠席</button>
-                </form>
-                <form action="/posts" method="POST" class="management">
-                    @csrf
                     <input type="hidden" name="post[category_id]" value =3>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">遅刻</button>
-                </form>
-                <form action="/posts" method="POST" class="management">
-                    @csrf
                     <input type="hidden" name="post[category_id]" value =4>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">公欠</button>
                 </form>

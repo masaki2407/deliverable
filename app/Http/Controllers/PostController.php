@@ -17,6 +17,7 @@ class PostController extends Controller
         $management4=$post->where('category_id','4')->get()->count();
         return view('posts.index')->with([
     
+            'posts'=> $post ->get(),
             'management1'=> $management1,
             'management2'=> $management2,
             'management3'=> $management3,
