@@ -16,10 +16,19 @@
                     @csrf
                     <input type="hidden" name="post[category_id]" value =1>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">出席</button>
+                </form>
+                 <form action="/posts" method="POST" class="management">
+                    @csrf
                     <input type="hidden" name="post[category_id]" value =2>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">欠席</button>
+                </form>
+                <form action="/posts" method="POST" class="management">
+                    @csrf
                     <input type="hidden" name="post[category_id]" value =3>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">遅刻</button>
+                </form>
+                <form action="/posts" method="POST" class="management">
+                    @csrf
                     <input type="hidden" name="post[category_id]" value =4>
                     <button class="w-12 h-12 bg-blue-400 text-lg text-white font-semihold rounded-full hover:bg-blue-500" type ="submit">公欠</button>
                 </form>
@@ -27,7 +36,7 @@
         </div>
         <div class="overflow-scroll">
             @foreach($posts as $post)
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 ...">
             <div>{{$post->category->management}}</div>
             <div>{{$post->created_at}}</div>
             <a href="/posts/{{ $post->id }}/edit">edit</a>
@@ -51,6 +60,7 @@
         <div>
             '公欠'{{$management4}}
         </div>
+
     </body>
     <script>
             function deletePost(id) {
