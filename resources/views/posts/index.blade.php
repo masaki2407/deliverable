@@ -51,9 +51,6 @@
         <div>
             '公欠'{{$management4}}
         </div>
-        <h2 class='title'>
-            <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-        </h2>
     </body>
     <script>
             function deletePost(id) {
